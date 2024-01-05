@@ -1,8 +1,9 @@
 use std::io;
 fn main() {
-  let mut input = String::new();
-  println!("Let me guess your name");
-  println!("Enter your name: ");
-  io::stdin().read_line(&mut input).expect("Something went wrong");
-  println!("Your name is {input}");
+  let mut input = String::new(); 
+  io::stdin().read_line(&mut input).expect("Error reading line");
+  let int_input: i64 = input.trim().parse().unwrap();
+
+  
+  println!("{}", int_input + 4);
 }
