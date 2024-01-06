@@ -1,9 +1,18 @@
 use std::io;
 fn main() {
-  let mut input = String::new(); 
-  io::stdin().read_line(&mut input).expect("Error reading line");
-  let int_input: i64 = input.trim().parse().unwrap();
 
-  
-  println!("{}", int_input + 4);
+  fn solution(num: i32) -> i32 {
+    if num < 0 {
+      return 0;
+    }
+    let mut sum: i32 = 0;
+    for i in 0..num {
+      if i % 3 == 0 || i % 5 == 0 {
+        sum += i;
+      }
+    }
+    return sum; 
+  }
+
+  println!("{}", solution(10));
 }
