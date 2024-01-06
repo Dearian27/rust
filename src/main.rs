@@ -1,18 +1,14 @@
 use std::io;
 fn main() {
+  let mut empty_vector: Vec<i32> = Vec::new();
+  let mut initalized_vector: Vec<i32> = vec![1, 3, 4, 5, 1];
 
-  fn solution(num: i32) -> i32 {
-    if num < 0 {
-      return 0;
-    }
-    let mut sum: i32 = 0;
-    for i in 0..num {
-      if i % 3 == 0 || i % 5 == 0 {
-        sum += i;
-      }
-    }
-    return sum; 
+  initalized_vector.push(4);
+  // let second = initalized_vector.push
+
+  if (false || true) && true && (false || true) {
+    println!("Hello, world!");
   }
 
-  println!("{}", solution(10));
+  println!("{}", initalized_vector[initalized_vector.len() - 1]);
 }
